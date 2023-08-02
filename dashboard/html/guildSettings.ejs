@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= guild.name %> - Geantbot</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="left">
+			<img src="../assets/GeantBotor.png" width="100px" height="100px">
+			<h2 class="logot">eantbot</h2>
+		</div>
+		<div class="right">
+			<img src="<%=avatar %>" alt="<%= username %>" title="<%= username %>" class="usericon">
+			<button class="logout" onclick="window.location.href = '/logout'">Logout</button>
+		</div>
+	</nav>
+	<section class="main-content">
+		<div class="container">
+			<h3 class="Welcome message">You are viewing "<%= guild.name %>" WARNING: Please complete every field (fix soon)</h3>
+			<div class="line"></div>
+            <button class="back" onclick="window.location.href='/dashboard'">Back to dashboard</button>
+            <% if (updated) { %>
+                <p class="messages" style="color: green;">Updated with successfully</p>
+            <% } %>
+            <% if (error) { %>
+                <p class="messages" style="color: red;">Unable to update!</p>
+            <% } %>
+            <br><br>
+            <form class="settings_form" action="/guild/<%= guild.id %>" method="post">
+				<h2 class="PrefixText">Prefix Setting:</h2>
+                <input id="prefix" type="text" name="prefix" placeholder="<%= guild.prefix %>">
+				<div class="line"></div>
+				<h2 class="ChannelsWelText">Welcome Channel Setting:</h2>
+				<select name="welchannel" id="welchannel" name="welchannel">
+					<option value="<%= guild.WelcomeChannel %>"><%= guild.WelcomeChannel %></option>
+					<% for (var i = 0; i < ChannelList.length; i++) { %>
+						<option value="<%= ChannelList[i] %>"><%= ChannelList[i] %></option>
+					<% } %>
+				</select>
+				<div class="line"></div>
+				<h2 class="welMessageText">Welcome Message Setting:</h2>
+				<textarea id="welmessage" name="welmessage" placeholder="<%= guild.WelcomeMsg %>"></textarea>
+				<br><br>
+				<input class="submit" type="submit" value="Save Changes">
+            </form>
+		</div>
+	</section>
+</body>
+</html>

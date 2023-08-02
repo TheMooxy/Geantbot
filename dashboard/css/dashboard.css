@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+body {
+	background: #212121;
+	font-family: "Roboto", sans-serif;
+}
+
+.stat-card {
+	background: #fff;
+	padding: 25px;
+	margin-bottom: 25px;
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s;
+}
+.stat-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.stat-card__icon-circle {
+	height: 60px;
+	width: 60px;
+	border-radius: 60px;
+	background: rgba(0, 123, 255, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.stat-card__icon-circle i {
+	font-size: 30px;
+	color: #007bff;
+}
+.stat-card__icon.stat-card__icon--success .stat-card__icon-circle {
+	background: rgba(40, 167, 69, 0.2);
+}
+.stat-card__icon.stat-card__icon--success .stat-card__icon-circle i {
+	color: #28a745;
+}
+.stat-card__icon.stat-card__icon--danger .stat-card__icon-circle {
+	background: rgba(220, 53, 69, 0.2);
+}
+.stat-card__icon.stat-card__icon--danger .stat-card__icon-circle i {
+	color: #dc3545;
+}
+.stat-card__icon.stat-card__icon--warning .stat-card__icon-circle {
+	background: rgba(255, 193, 7, 0.2);
+}
+.stat-card__icon.stat-card__icon--warning .stat-card__icon-circle i {
+	color: #ffc107;
+}
+.stat-card__icon.stat-card__icon--primary .stat-card__icon-circle {
+	background: rgba(0, 123, 255, 0.2);
+}
+.stat-card__icon.stat-card__icon--primary .stat-card__icon-circle i {
+	color: #007bff;
+}
+
+.guilds_list {
+	width: 100%;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+.guild {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.guild div {
+	background: linear-gradient(75deg, rgb(0, 147, 37), rgb(0, 255, 153));
+    border-radius: 50px;
+	list-style: none;
+	border: 3px solid rgb(255, 255, 255);
+	outline: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: all .15s linear;
+}
+
+.guild div:hover {
+	cursor: pointer;
+	transform: scale(.9);
+}
+
+.guildss {
+    font-size: 20px;
+	margin-right: 10px;
+}
+
+.guildsimg {
+	border-radius: 100%;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+.logout:hover {
+	border: 2px solid #f9f9f9;
+	cursor: pointer;
+}
+
+.noserver {
+    margin-top: 25px;
+}

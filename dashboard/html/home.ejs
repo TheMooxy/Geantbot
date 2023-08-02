@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home - Geantbot</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="left">
+			<img src="./assets/GeantBotor.png" width="100px" height="100px">
+			<h2 class="logot">eantbot</h2>
+		</div>
+		<div class="right">
+			<button class="logins" onclick="window.location.href='/dashboard'">Login</button>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<div class="headd">
+		<div class="welcome">
+			<img class="MainImg" src="./assets/logog.png" width="512px" height="512px">
+			<h1 class="WelcomeMsg">Welcome to Geantbot (Public version)</h1>
+		</div>
+		<br>
+		<div class="rectangler">
+			<h1 class="titleStats">Bot Stats</h1>
+			<div class="line"></div>
+			<h2 class="GuildText">Geantbot is currently in:</h2>
+			<h3 class="Guilds"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#262626}</style><path d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg> <%= guilds %> guilds</h3>
+			<div class="line"></div>
+			<h2 class="UsersText">Viewing:</h2>
+			<h3 class="Users"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#262626}</style><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg> <%= users %> users</h3>
+		</div>
+	</div>
+	<br>
+	<div class="Informations">
+		<h3 class="Title">Let's make the future !</h3>
+		<p class="Guilds">Geantbot is in <%= guilds %></p><br>
+	</div>
+</body>
+</html>

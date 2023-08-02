@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dashboard - Geantbot</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="left">
+			<img src="./assets/GeantBotor.png" width="100px" height="100px">
+			<h2 class="logot">eantbot</h2>
+		</div>
+		<div class="right">
+			<img src="<%=avatar %>" alt="<%= username %>" title="<%= username %>" class="usericon">
+			<button class="logout" onclick="window.location.href = '/logout'">Logout</button>
+		</div>
+	</nav>
+	<section class="main-content">
+		<div class="container">
+			<h3 class="Welcome message">Welcome back <%= username %></h3>
+			<div class="line"></div>
+			<div class="guilds">
+    			<p>Current Guilds</p>
+    			<ul class="guilds_list">
+        			<% for (var i = 0; i < guilds.length; i++) { %>
+						<% if (guilds[i].hasPerm) { %>
+							<li class="guild">
+								<div onclick="window.location.href='/guild/<%= guilds[i].id %>'">
+									<img class="guildsimg" src="<%= guilds[i].avatar %>" width="45px" height="45px">
+									<h1 class="guildss"><%= guilds[i].name %></h1>
+								</div>
+							</li>
+						<% } %>
+        			<% } %>
+					<p class="noserver">Your server is not here ? <a href="https://discord.com/api/oauth2/authorize?client_id=1135535911866740849&permissions=8&redirect_uri=http%3A%2F%2Fbot-service.cybrancee.com%3A5190%2Fdashboard&response_type=code&scope=applications.commands.permissions.update%20bot">Invite the bot to your server :D</a></p>
+   				</ul>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
