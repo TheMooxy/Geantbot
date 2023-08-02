@@ -30,7 +30,7 @@ app.use(urlencodedParser)
 const oauth = new DiscordOauth2({
   clientId: config.clientId,
   clientSecret: config.clientSecret,
-  redirectUri: `${config.debugdomain}/callback`
+  redirectUri: `${config.domain}/callback`
 })
 
 client.commands = new Collection()
