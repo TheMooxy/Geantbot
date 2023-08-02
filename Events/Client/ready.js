@@ -11,7 +11,7 @@ module.exports = {
     async execute(client) {
         console.log(`${client.user.tag} is now online`)
 
-        client.user.setPresence({activities: [{name: "dev-0.5.0", type: ActivityType.Playing}]})
+        client.user.setPresence({activities: [{name: "dev-0.6.0", type: ActivityType.Playing}]})
 
         if (!mongoURL) return
         mongoose.connect(mongoURL, {
